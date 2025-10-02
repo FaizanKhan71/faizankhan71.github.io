@@ -374,6 +374,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+    margin-right: 0.5rem;
 }
 
 /* Footer */
