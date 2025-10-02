@@ -358,6 +358,7 @@ p {
     transition: var(--transition);
     box-shadow: var(--shadow-md);
     animation: gradientShift 3s ease infinite;
+    margin: 0 auto;
 }
 
 .resume-download:hover {
