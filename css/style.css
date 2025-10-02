@@ -344,6 +344,7 @@ p {
 .resume-download {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: linear-gradient(45deg, #000000, #4c00ff, #00d0ff, #003ada, #be0202, #66ff00);
     background-size: 300% 300%;
