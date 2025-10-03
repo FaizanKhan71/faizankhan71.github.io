@@ -314,10 +314,13 @@ p {
 }
 
 .project-logo {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+  width: 50px; /* or your preferred size */
+  height: auto; /* keep aspect ratio */
+  vertical-align: middle; /* aligns image with the text vertically */
+  margin-right: 8px; /* spacing between image and text */
+  display: inline-block; /* ensures it respects text line */
 }
+
 
 /* Resume Section */
 .resume-section {
