@@ -189,6 +189,19 @@
             </article>
         </section>
     </main>
+  
+  <!-- PDF Security -->
+  <script>
+        document.querySelector('.resume-download').addEventListener('click', function(e) {
+              e.preventDefault();
+              const password = prompt("Enter password to view the portfolio PDF:");
+              if (password === "Faizan26079") { // <-- change this password
+                  window.open("Mohammad_Faizan_Khan_Portfolio.pdf.pdf.pdf", "_blank");
+              } else if (password !== null) {
+                  alert("Incorrect password. Access denied.");
+              }
+            });
+            </script>
 
     <section class="resume-section">
         <div class="resume-content">
@@ -294,6 +307,7 @@
     </script>
 </body>
 </html>
+
 
 
 
