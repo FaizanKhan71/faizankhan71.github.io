@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>US Bank Loan Analytics Dashboard | Faizan Khan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="US Bank Loan Analytics Dashboard by Faizan Khan — SQL, Power BI, Python, and Data Science">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #002b5b;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+    main {
+      max-width: 950px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(40,60,90,0.08);
+      padding: 2.5rem;
+    }
+    h2 {
+      color: #003366;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      border-left: 4px solid #0073e6;
+      padding-left: 8px;
+    }
+    h3 {
+      color: #003366;
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+      background: #f9fbff;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th {
+      background: #e8f1ff;
+      color: #003366;
+    }
+    blockquote {
+      background: #eef6ff;
+      padding: 1rem;
+      border-left: 5px solid #0073e6;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      color: #1e3a8a;
+    }
+    pre {
+      background: #f3f4f6;
+      padding: 1rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+    }
+    code {
+      color: #2563eb;
+      font-family: monospace;
+    }
+    a {
+      color: #004aad;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      margin-left: 1.2rem;
+    }
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+    .badges img {
+      height: 26px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    @media(max-width:700px){
+      main { padding: 1.3rem; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>🏦 US Bank Loan Analytics Dashboard</h1>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License">
+    <img src="https://img.shields.io/badge/SQL-Oracle-blue" alt="SQL Oracle">
+    <img src="https://img.shields.io/badge/PowerBI-Dashboard-yellow" alt="PowerBI Dashboard">
+    <img src="https://img.shields.io/badge/Python-Data--Science-green" alt="Python Data Science">
+  </div>
+</header>
+
+<main>
+
+  <blockquote>
+    <b>An end-to-end data analytics and business intelligence solution for monitoring loan performance, assessing borrower risk, and enabling smarter banking decisions.</b>
+  </blockquote>
+
+  <h2>📸 Dashboard Preview</h2>
+
+  <h3>Overview</h3>
+  <img src="https://github.com/user-attachments/assets/56ac6905-cfd8-4a86-9f04-1e1523fcdf71" alt="Dashboard Page 3">
+  <img src="https://github.com/user-attachments/assets/39476156-b1e0-44ad-9307-56f3bceddcc5" alt="Dashboard Page 2">
+  <img src="https://github.com/user-attachments/assets/13b33a9e-3030-4ea6-bc35-22d8e82277b9" alt="Dashboard Page 1">
+
+  <p><b>Summary:</b>  
+    <a href="https://github.com/user-attachments/assets/8c69af9b-2afc-4d7f-a8dd-597ad8bea8ab" target="_blank">Click here to view the dashboard summary video</a>
+  </p>
+
+  <h2>🏗️ Project Architecture</h2>
+  <p>
+    This project follows a modern data pipeline integrating ETL, SQL, machine learning, and visualization tools to transform raw loan data into actionable insights:
+  </p>
+  <ul>
+    <li>🔄 <b>ETL & Data Ingestion</b>: Collect and prepare raw loan data</li>
+    <li>🧹 <b>Python Data Cleaning</b>: Handle rejections and preprocess records</li>
+    <li>🗃️ <b>Oracle SQL Database</b>: Store cleaned data, build staging tables, analytical views, and joins</li>
+    <li>🧠 <b>Python + Scikit-learn</b>: Build risk prediction models</li>
+    <li>📊 <b>Power BI Dashboard</b>: Deliver insights to business users and stakeholders</li>
+  </ul>
+  <img src="https://github.com/user-attachments/assets/f416cf3a-bfc9-41c3-913a-f87ea9bfac53" alt="BI Architecture">
+
+  <h2>✨ Key Features</h2>
+  <ul>
+    <li>📊 <b>Loan Portfolio Overview</b>: Analyze funded amounts, interest rates, and DTI ratios</li>
+    <li>✅ <b>Loan Performance Segmentation</b>: Classify loans as Fully Paid, Current, or Charged Off</li>
+    <li>🌍 <b>Regional Lending Insights</b>: Visualize lending activity by geography</li>
+    <li>👥 <b>Borrower Demographics</b>: Explore employment length, home ownership, and loan purpose</li>
+    <li>🤖 <b>Predictive Analytics (Future Scope)</b>: Risk scoring using ML models</li>
+  </ul>
+
+  <h2>🛠️ Tech Stack</h2>
+  <table>
+    <tr><th>Category</th><th>Tools & Libraries</th></tr>
+    <tr><td><b>Database</b></td><td>Oracle SQL, SQLAlchemy</td></tr>
+    <tr><td><b>ETL</b></td><td>Python (Pandas, NumPy), OpenPyXL</td></tr>
+    <tr><td><b>Visualization</b></td><td>Power BI, Plotly, Matplotlib, Seaborn</td></tr>
+    <tr><td><b>ML / AI</b></td><td>Scikit-learn (classification, forecasting)</td></tr>
+    <tr><td><b>Versioning</b></td><td>GitHub</td></tr>
+    <tr><td><b>Development</b></td><td>Jupyter Notebook</td></tr>
+  </table>
+
+  <h2>📂 Dataset</h2>
+  <p>The dataset simulates real-world loan portfolios and includes:</p>
+  <ul>
+    <li>Borrower demographics: income, home ownership, employment length</li>
+    <li>Loan details: funded amount, interest rate, term, DTI ratio, purpose</li>
+    <li>Repayment history and loan performance categories</li>
+  </ul>
+
+  <h2>⚙️ Installation & Setup</h2>
+  <pre><code>
+# 1. Clone the repository
+git clone https://github.com/Faizan-26079/us-bank-loan-analytics.git
+
+# 2. Import dataset into Oracle SQL Developer
+
+# 3. Run SQL scripts to create schema, staging tables & views
+
+# 4. Load Power BI and connect to Oracle DB
+
+# 5. (Optional) Run Python scripts for ML & exploratory analysis
+  </code></pre>
+
+  <h2>🎯 Future Enhancements</h2>
+  <ul>
+    <li>🔮 ML Models: Predictive risk scoring and borrower classification</li>
+    <li>⏳ Time Series Forecasting: Loan origination and repayment trends</li>
+    <li>🌐 Web Deployment: Streamlit or Voila interactive dashboards</li>
+    <li>☁️ Cloud Integration: Automated pipelines with AWS or Azure</li>
+  </ul>
+
+  <h2>📄 License</h2>
+  <p>Licensed under the <b>MIT License</b> — see the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+  <h2>👨‍💻 Author</h2>
+  <p><b>Faizan</b> — Data Analytics & Power BI Professional  
+     Focused on <b>SQL, Power BI, Python</b>, and scalable data solutions.</p>
+  <ul>
+    <li>📬 <a href="mailto:faizankhanofficial71@gmail.com">Email</a></li>
+    <li>💼 <a href="https://github.com/FaizanKhan71" target="_blank">GitHub</a></li>
+    <li>🌐 <a href="https://faizankhan71.github.io/" target="_blank">Portfolio</a></li>
+    <li>📱 +91-8459414569</li>
+  </ul>
+
+  <h2>🔥 What’s Next?</h2>
+  <blockquote>
+    <b>What improvements or features would you suggest to make this loan analytics dashboard even more impactful?</b>
+  </blockquote>
+  <p>Feel free to share your ideas, raise issues, or contribute enhancements.<br>
+     📧 <b>Email:</b> <a href="mailto:faizankhanofficial71@gmail.com">faizankhanofficial71@gmail.com</a>
+  </p>
+
+</main>
+
+<footer>
+  © 2025 Faizan Khan — All rights reserved.
+</footer>
+
+</body>
+</html>
