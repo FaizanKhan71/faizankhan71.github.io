@@ -44,7 +44,7 @@
 
   <!-- Theme Toggle Button -->
   <button class="theme-toggle animate-on-scroll" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
-    🌙
+    
   </button>
   
   <!-- Consultation Button -->
@@ -154,7 +154,7 @@
 
       <article class="project">
         <h3>
-          <a href="https://faizankhan71.github.io/US_Bank-Intelligent-Loan-Analytics-Platform/" target="_blank">
+          <a href="US_Bank-Intelligent-Loan-Analytics-Platform.html" target="_blank">
             <img src="images/usbank.png" alt="US Bank Logo" class="project-logo" loading="lazy" />
             US Bank – Intelligent Loan Analytics Platform
           </a>
@@ -170,7 +170,7 @@
 
       <article class="project">
         <h3>
-          <a href="#" target="_blank">
+          <a href="Shopify_Dynamic_E_Commerce_KPI_Dashboard.html" target="_blank">
             <img src="images/shopify.png" alt="Shopify Logo" class="project-logo" loading="lazy" />
             Shopify – Dynamic E-Commerce KPI Dashboard
           </a>
@@ -185,7 +185,7 @@
 
       <article class="project">
         <h3>
-          <a href="#" target="_blank">
+          <a href="BMW_Global_Sales_and_EV_Performance_Insights.html" target="_blank">
             <img src="images/bmw.png" alt="BMW Logo" class="project-logo" loading="lazy" />
             BMW – Global Sales & EV Performance Insights
           </a>
@@ -288,15 +288,13 @@
         // Theme Toggle Functionality
         function toggleTheme() {
             const body = document.body;
-            const themeToggle = document.querySelector('.theme-toggle');
+            const isDarkMode = body.getAttribute('data-theme') === 'dark';
             
-            if (body.getAttribute('data-theme') === 'dark') {
+            if (isDarkMode) {
                 body.removeAttribute('data-theme');
-                themeToggle.innerHTML = '🌙';
                 localStorage.setItem('theme', 'light');
             } else {
                 body.setAttribute('data-theme', 'dark');
-                themeToggle.innerHTML = '☀️';
                 localStorage.setItem('theme', 'dark');
             }
         }
