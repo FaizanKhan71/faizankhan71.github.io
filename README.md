@@ -4,7 +4,7 @@
   <table>
     <tr>
       <td width="140" align="center">
-        <img src="image/portfolio.png" alt="Mohammad Faizan Khan Profile" width="120" height="120" style="border-radius: 50%; border: 2px solid #004080;" />
+        <img src="faizankhan71.github.io/images/" alt="Mohammad Faizan Khan Profile" width="120" height="120" style="border-radius: 50%;           border: 2px solid #004080;" />
       </td>
       <td width="20"></td>
       <td align="left" valign="middle">
