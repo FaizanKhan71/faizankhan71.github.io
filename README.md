@@ -1,10 +1,9 @@
-# 🌟 Mohammad Faizan Khan | Power BI Developer & Data Analyst
-
+# 🌟 | Power BI Developer & Data Analyst |
 <div align="center">
   <table>
     <tr>
-      <td width="140" align="center">
-        <img src="faizankhan71.github.io/images/" alt="Mohammad Faizan Khan Profile" width="120" height="120" style="border-radius: 50%;           border: 2px solid #004080;" />
+      <td width="200" align="center">
+      <img src="images/portfolio.png" alt="Mohammad Faizan Khan Profile" width="200" height="200" style="border-radius: 50%; border: 2px solid  #00509E;">
       </td>
       <td width="20"></td>
       <td align="left" valign="middle">
