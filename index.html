@@ -42,11 +42,29 @@
     </div>
   </header>
 
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle animate-on-scroll" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+    🌙 Dark
+  </button>
+  
+  <!-- Consultation Button -->
+  <button class="consultation-btn animate-on-scroll" onclick="window.open('https://cal.com/faizankhanofficial71/30min', '_blank')" aria-label="Free Consultation">
+     Free Consultation
+  </button>
+  
+  <!-- Hire Me Button -->
+  <button class="hire-me-btn animate-on-scroll" onclick="openPortfolio()" aria-label="Hire Me">
+    💼 Hire Me
+  </button>
+  
+  <!-- Mouse Pointer -->
+  <div class="pointer" aria-hidden="true"></div>
+
   <!-- Main Content -->
   <main role="main">
 
     <!-- About Section -->
-    <section id="about" class="section" aria-labelledby="about-heading">
+    <section id="about" class="section animate-on-scroll" aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
       <p>
         Power BI Developer with over 4 years of experience in delivering end-to-end Business Intelligence (BI) solutions. Expertise in Power BI, SQL Server, data modeling, and visualization design. Strong track record in:
@@ -62,7 +80,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section" aria-labelledby="skills-heading">
+    <section id="skills" class="section slide-in-left" aria-labelledby="skills-heading">
       <h2 id="skills-heading">Technical Skills</h2>
 
       <h3>Primary Skills</h3>
@@ -93,7 +111,7 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="section" aria-labelledby="experience-heading">
+    <section id="experience" class="section slide-in-right" aria-labelledby="experience-heading">
       <h2 id="experience-heading">Professional Experience</h2>
 
       <article class="job">
@@ -123,7 +141,7 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section" aria-labelledby="projects-heading">
+    <section id="projects" class="section scale-in" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Key Projects</h2>
 
       <article class="project">
@@ -144,7 +162,7 @@
 
       <article class="project">
         <h3>
-          <a href="https://faizankhan71.github.io/Shopify_Dynamic_E_Commerce_KPI_Dashboard/" target="_blank">
+          <a href="#" target="_blank">
             <img src="images/shopify.png" alt="Shopify Logo" class="project-logo" loading="lazy" />
             Shopify – Dynamic E-Commerce KPI Dashboard
           </a>
@@ -159,7 +177,7 @@
 
       <article class="project">
         <h3>
-          <a href="https://faizankhan71.github.io/BMW_Global_Sales_and_EV_Performance_Insights/" target="_blank">
+          <a href="#" target="_blank">
             <img src="images/bmw.png" alt="BMW Logo" class="project-logo" loading="lazy" />
             BMW – Global Sales & EV Performance Insights
           </a>
@@ -174,7 +192,7 @@
     </section>
 
     <!-- Certifications -->
-    <section id="certifications" class="section" aria-labelledby="certifications-heading">
+    <section id="certifications" class="section scale-in" aria-labelledby="certifications-heading">
       <h2 id="certifications-heading">Certifications & Education</h2>
       <article class="job">
                 <h3>Winspectrum Certified: Power BI Data Analyst Associate</h3>
@@ -189,19 +207,6 @@
             </article>
         </section>
     </main>
-  
-  <!-- PDF Security -->
-  <script>
-        document.querySelector('.resume-download').addEventListener('click', function(e) {
-              e.preventDefault();
-              const password = prompt("Enter password to view the portfolio PDF:");
-              if (password === "Faizan26079") { // <-- change this password
-                  window.open("Mohammad_Faizan_Khan_Portfolio.pdf.pdf.pdf", "_blank");
-              } else if (password !== null) {
-                  alert("Incorrect password. Access denied.");
-              }
-            });
-            </script>
 
     <section class="resume-section">
         <div class="resume-content">
@@ -214,6 +219,18 @@
             </a>
         </div>
     </section>
+    
+      <script>
+        document.querySelector('.resume-download').addEventListener('click', function(e) {
+              e.preventDefault();
+              const password = prompt("Enter password to view the portfolio PDF:");
+              if (password === "Faizan123") { // <-- change this password
+                  window.open("Mohammad_Faizan_Khan_Portfolio.pdf.pdf.pdf", "_blank");
+              } else if (password !== null) {
+                  alert("Incorrect password. Access denied.");
+              }
+            });
+            </script>
 
 
     <footer>
@@ -260,6 +277,93 @@
     </script>
 
         <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                themeToggle.innerHTML = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Hire Me Button Functionality
+        function openPortfolio() {
+            const password = prompt("Enter password to view the portfolio PDF:");
+            if (password === "Faizan123") {
+                window.open("Mohammad_Faizan_Khan_Portfolio.pdf.pdf.pdf", "_blank");
+            } else if (password !== null) {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+        
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light';
+            }
+            
+            // Initialize scroll animations
+            initScrollAnimations();
+        });
+        
+        // Scroll Animation Observer
+        function initScrollAnimations() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll, .slide-in-left, .slide-in-right, .scale-in, .rotate-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Mouse Pointer Tracking
+        const isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const isTouch = window.matchMedia("(pointer: coarse)").matches;
+        const shouldRun = !isReducedMotion && !isTouch;
+        
+        if (shouldRun) {
+            let mouseX = 0;
+            let mouseY = 0;
+            
+            const pointer = document.querySelector(".pointer");
+            
+            window.addEventListener("mousemove", (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            function animatePointer() {
+                if (pointer) {
+                    pointer.style.setProperty("--mouseX", `${mouseX}px`);
+                    pointer.style.setProperty("--mouseY", `${mouseY}px`);
+                }
+                requestAnimationFrame(animatePointer);
+            }
+            
+            animatePointer();
+        }
+        
         // Canvas background for header
         const canvas = document.getElementById('header-canvas');
         if (canvas) {
@@ -307,10 +411,6 @@
     </script>
 </body>
 </html>
-
-
-
-
 
 
 
