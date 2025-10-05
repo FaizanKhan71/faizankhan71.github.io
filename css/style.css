@@ -27,6 +27,10 @@
     --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
 }
 
+[data-theme="dark"] body {
+    background: #332940;
+}
+
 [data-theme="dark"] .section {
     background: #ffffff;
     color: #2c3e50;
@@ -90,8 +94,10 @@
 }
 
 .theme-toggle:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(45deg, #4c00ff, #00d0ff, #003ada, #be0202, #66ff00, #ffd700);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    color: #ffffff;
 }
 
 .consultation-btn {
@@ -100,8 +106,10 @@
 }
 
 .consultation-btn:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(45deg, #4c00ff, #00d0ff, #003ada, #be0202, #66ff00, #ffd700);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    color: #ffffff;
 }
 
 .hire-me-btn {
@@ -110,8 +118,10 @@
 }
 
 .hire-me-btn:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(45deg, #4c00ff, #00d0ff, #003ada, #be0202, #66ff00, #ffd700);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    color: #ffffff;
 }
 
 
@@ -712,8 +722,10 @@ body:has(a:hover) .pointer {
 }
 
 .theme-toggle:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(45deg, #4c00ff, #00d0ff, #003ada, #be0202, #66ff00, #ffd700);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    color: #ffffff;
     width: auto;
     border-radius: 25px;
     padding: 0 1rem;
@@ -721,13 +733,18 @@ body:has(a:hover) .pointer {
 
 .theme-toggle:hover::after {
     content: ' Toggle Dark Mode';
+    font-family: 'Segoe UI Semibold', sans-serif;
+    font-weight: 600;
     font-size: 0.9rem;
     margin-left: 8px;
+    color: #ffffff;
 }
 
 .consultation-btn:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(45deg, #4c00ff, #00d0ff, #003ada, #be0202, #66ff00, #ffd700);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    color: #ffffff;
     width: auto;
     border-radius: 25px;
     padding: 0 1rem;
@@ -735,13 +752,18 @@ body:has(a:hover) .pointer {
 
 .consultation-btn:hover::after {
     content: ' Book Free Consultation';
+    font-family: 'Segoe UI Semibold', sans-serif;
+    font-weight: 600;
     font-size: 0.9rem;
     margin-left: 8px;
+    color: #ffffff;
 }
 
 .hire-me-btn:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(45deg, #4c00ff, #00d0ff, #003ada, #be0202, #66ff00, #ffd700);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    color: #ffffff;
     width: auto;
     border-radius: 25px;
     padding: 0 1rem;
@@ -749,8 +771,11 @@ body:has(a:hover) .pointer {
 
 .hire-me-btn:hover::after {
     content: ' Start Project';
+    font-family: 'Segoe UI Semibold', sans-serif;
+    font-weight: 600;
     font-size: 0.9rem;
     margin-left: 8px;
+    color: #ffffff;
 }
 
 .theme-toggle:hover .btn-text,
