@@ -53,12 +53,20 @@
   </button>
   
   <!-- Hire Me Button -->
-  <button class="hire-me-btn animate-on-scroll" onclick="openPortfolio()" aria-label="Hire Me">
+  <button class="hire-me-btn animate-on-scroll" onclick="openProjectModal()" aria-label="Hire Me">
     👆
   </button>
   
   <!-- Mouse Pointer -->
   <div class="pointer" aria-hidden="true"></div>
+
+  <!-- Project Form Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProjectModal()">&times;</span>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScx4WAeZsriz-1032FLC8Wc7YO5dJPmBsGwR_Bk-em44bljHQ/viewform?embedded=true" width="100%" height="530" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
 
   <!-- Main Content -->
   <main role="main">
@@ -284,16 +292,33 @@
             
             if (body.getAttribute('data-theme') === 'dark') {
                 body.removeAttribute('data-theme');
-                themeToggle.innerHTML = '🌙 Dark';
+                themeToggle.innerHTML = '🌙';
                 localStorage.setItem('theme', 'light');
             } else {
                 body.setAttribute('data-theme', 'dark');
-                themeToggle.innerHTML = '☀️ Light';
+                themeToggle.innerHTML = '☀️';
                 localStorage.setItem('theme', 'dark');
             }
         }
         
-        // Hire Me Button Functionality
+        // Project Modal Functions
+        function openProjectModal() {
+            document.getElementById('projectModal').style.display = 'block';
+        }
+        
+        function closeProjectModal() {
+            document.getElementById('projectModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Hire Me Button Functionality (for portfolio download)
         function openPortfolio() {
             const password = prompt("Enter password to view the portfolio PDF:");
             if (password === "Faizan123") {
@@ -310,7 +335,7 @@
             
             if (savedTheme === 'dark') {
                 document.body.setAttribute('data-theme', 'dark');
-                themeToggle.innerHTML = '☀️ Light';
+                themeToggle.innerHTML = '☀️';
             }
             
             // Initialize scroll animations
@@ -411,6 +436,7 @@
     </script>
 </body>
 </html>
+
 
 
 
